@@ -42,7 +42,7 @@ agent = create_tool_calling_agent(
     prompt=prompt,
     tools=tools
 )
-
+#important for context
 agent_executor = AgentExecutor(agent=agent, tools=tools, verbose=True)
 query = input("How can I help you Today? \n\n")
 raw_response = agent_executor.invoke({"query": query})
